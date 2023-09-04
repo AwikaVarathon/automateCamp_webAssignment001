@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.5 on darwin)" generated="20230904 17:55:38.429" rpa="false" schemaversion="4">
+<suite id="s1" name="Web Assignment 001" source="/Users/dewdoppio/Desktop/automate camp/automateCamp_Assignment/automateCamp_webAssignment001/web_assignment_001.robot">
+<test id="s1-t1" name="Automate Test Web Assignment 001" line="31">
+<kw name="Visit Website">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230904 17:55:38.510" level="INFO">Opening browser 'chrome' to base url 'http://testphp.vulnweb.com/login.php'.</msg>
+<status status="PASS" starttime="20230904 17:55:38.510" endtime="20230904 17:55:41.225"/>
+</kw>
+<status status="PASS" starttime="20230904 17:55:38.510" endtime="20230904 17:55:41.225"/>
+</kw>
+<kw name="Login Wtih Username And Password">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_LOGIN_USERNAME}</arg>
+<arg>${LOGIN_USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230904 17:55:41.226" level="INFO">Typing text 'test' into text field '//div[@id='content']//form//input[@name='uname']'.</msg>
+<status status="PASS" starttime="20230904 17:55:41.226" endtime="20230904 17:55:41.345"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_LOGIN_PASSWORD}</arg>
+<arg>${LOGIN_PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230904 17:55:41.345" level="INFO">Typing text 'test' into text field '//div[@id='content']//form//input[@name='pass']'.</msg>
+<status status="PASS" starttime="20230904 17:55:41.345" endtime="20230904 17:55:41.382"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON_LOGIN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230904 17:55:41.382" level="INFO">Clicking element '//div[@id='content']//form//input[@value='login']'.</msg>
+<status status="PASS" starttime="20230904 17:55:41.382" endtime="20230904 17:55:41.648"/>
+</kw>
+<status status="PASS" starttime="20230904 17:55:41.225" endtime="20230904 17:55:41.648"/>
+</kw>
+<kw name="Verify Login Success">
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>${GLOBAL_NAV_LOGOUT}</arg>
+<arg>${TITLE_LOGOUT_MESSAGE}</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" starttime="20230904 17:55:41.648" endtime="20230904 17:55:41.671"/>
+</kw>
+<status status="PASS" starttime="20230904 17:55:41.648" endtime="20230904 17:55:41.671"/>
+</kw>
+<kw name="Click Browse Categories">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${NAV_BAR_BROWSE_CATEGORIES}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230904 17:55:41.672" level="INFO">Clicking element '//div[@id='sectionLinks']//li//a[text()='Browse categories']'.</msg>
+<status status="PASS" starttime="20230904 17:55:41.671" endtime="20230904 17:55:41.952"/>
+</kw>
+<status status="PASS" starttime="20230904 17:55:41.671" endtime="20230904 17:55:41.952"/>
+</kw>
+<kw name="Verify Visit Categories Page Success">
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>${CATEGOTIES_PAGE_TITLE}</arg>
+<arg>${CATEGOTIES_PAGE_TITLE_MESSAGE}</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" starttime="20230904 17:55:41.952" endtime="20230904 17:55:41.969"/>
+</kw>
+<status status="PASS" starttime="20230904 17:55:41.952" endtime="20230904 17:55:41.969"/>
+</kw>
+<kw name="Check Categories In Categories Page">
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>//div[@id='content']//div[@class='story'][1]//a</arg>
+<arg>Posters</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230904 17:55:41.970" level="INFO">Verifying element '//div[@id='content']//div[@class='story'][1]//a' contains exact text 'Posters'.</msg>
+<status status="PASS" starttime="20230904 17:55:41.970" endtime="20230904 17:55:41.985"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>//div[@id='content']//div[@class='story'][2]//a</arg>
+<arg>Paintings</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230904 17:55:41.985" level="INFO">Verifying element '//div[@id='content']//div[@class='story'][2]//a' contains exact text 'Paintings'.</msg>
+<status status="PASS" starttime="20230904 17:55:41.985" endtime="20230904 17:55:41.997"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>//div[@id='content']//div[@class='story'][3]//a</arg>
+<arg>Stickers</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230904 17:55:41.998" level="INFO">Verifying element '//div[@id='content']//div[@class='story'][3]//a' contains exact text 'Stickers'.</msg>
+<status status="PASS" starttime="20230904 17:55:41.998" endtime="20230904 17:55:42.008"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>//div[@id='content']//div[@class='story'][4]//a</arg>
+<arg>Graffity</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230904 17:55:42.008" level="INFO">Verifying element '//div[@id='content']//div[@class='story'][4]//a' contains exact text 'Graffity'.</msg>
+<status status="PASS" starttime="20230904 17:55:42.008" endtime="20230904 17:55:42.018"/>
+</kw>
+<status status="PASS" starttime="20230904 17:55:41.969" endtime="20230904 17:55:42.018"/>
+</kw>
+<status status="PASS" starttime="20230904 17:55:38.509" endtime="20230904 17:55:42.018"/>
+</test>
+<status status="PASS" starttime="20230904 17:55:38.430" endtime="20230904 17:55:42.018"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Web Assignment 001">Web Assignment 001</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
