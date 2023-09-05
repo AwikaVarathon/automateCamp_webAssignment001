@@ -11,9 +11,9 @@ ${LOGIN_PASSWORD}			test
 
 
 # Elements - Login
-${INPUT_LOGIN_USERNAME}     //div[@id='content']//form//input[@name='uname']
-${INPUT_LOGIN_PASSWORD}     //div[@id='content']//form//input[@name='pass']
-${BUTTON_LOGIN}             //div[@id='content']//form//input[@value='login']
+${INPUT_LOGIN_USERNAME}     //input[@name='uname']
+${INPUT_LOGIN_PASSWORD}     //input[@name='pass']
+${BUTTON_LOGIN}             //input[@value='login']
 
 # Elements - Global Nav
 ${GLOBAL_NAV_LOGOUT}        //div[@id='globalNav']//td[@align='right']//a
